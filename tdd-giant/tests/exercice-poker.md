@@ -6,8 +6,8 @@ Etant donné plusieurs mains, quand on demande au programme, il doit déterminer
 ## Représentation des données en entrée
 
 ### Représentation d'une carte
-Ce sera une chaine de caractère composée de d'une chaine de caractères, la première partir pour la force de la carte, un pour la couleur de la carte.
-Les forces de cartes de la plus faible à la plus forte sont :
+Ce sera une chaine de caractère composée de deux parties concaténées. La première partie pour la force de la carte, la deuxième partie pour la couleur de la carte.
+Les forces de cartes, de la plus faible à la plus forte, sont :
 - 2 à 10
 - J (Jack/valet)
 - Q (Queen/dame)
@@ -20,7 +20,7 @@ Les couleurs sont les suivantes :
 - ♦ (carreau)
 - ♣ (trèfle)
 
-Exemples de carte :
+Exemples de cartes :
 - '2♠' 2 de pique
 - 'K♥' roi de coeur
 - '10♦' 10 de carreau
@@ -31,7 +31,11 @@ Ce sera un tableau de chaines de caractère, chaque élément représentant une 
 Exemple de main :
 ['2♠', 'K♥', '10♦', '10♠', '10♥']
 
-Remarque : les cartes n'apparaissent qu'en un seul exemplaire dans les mains des joueurs.
+Remarques :
+- Les mains sont toujours consitituées de 5 cartes.
+- Pas de cartes partagées entre plusieurs joueurs comme dans certaines variantes du poker.
+- Il faut considérer que les cartes et mains en entrée sont toutes valides.
+- Les cartes n'apparaissent qu'en un seul exemplaire dans les mains des joueurs.
 
 ## Rappel des règle permettant de déterminer quel main est la plus forte
 Classement des mains, de la plus forte à la plus faible :
