@@ -16,26 +16,10 @@ La dixième frame est particulière : en cas de strike au premier lancer, deux l
 Ainsi, la marque parfaite est de 300 points, pour douze strike consécutifs.
 
 ## Représentation des données en entrée
-Les résultats de la partie sont composées d'un tableau représentant chaque frame. Chaque frame étant représentée par une chaines de caractères, représentant chaque lancé.
+Les résultats de la partie sont composées d'un tableau représentant chaque lancer : chaque élément du tableau est un nombre correspondant au nombre de quilles qui sont tombées lors du lancer.
+Vous pouvez considérer que les données en entrée représente un partie valide (pas plus de 10 quilles tombée par frame, pas plus de lancer que possible lors d'une partie...).
 
-### Représentation d'une frame
-C'est donc une chaines de caractères. Les caractères que l'on peut avoir est soit :
-- 'X' si il y a eu un strike.
-- En cas de spare, un nombre correspondant au nombre de quille abbatues au premier lancer suivi de '/'.
-- En cas de trou deux nombre représentant les quilles abbatues à chaque lancer.
-
-Exemples de frames :
-- 'X' pour un strike
-- '5/' pour un spare
-- '15' pour un trou
-
-### Représentation d'une partie
-Une partie étant constitué de 10 frame, elle sera représentée par un tableau de 10 tableaux représentant les frames.
-
-Exemples de partie :
-['52','4/','X','44','23','00','X','X','4/','40'] => score de 120
-['52','4/','34', 'X', '8/','15','9/','02','4/','5/3'] => score de 104
-['X','X','X','X','X','X','X','X','X','XXX'] => score de 300
-
-### Cas particulier de la dernière frame
-La dernière frame peut avoir jusqu'à 3 éléments si il y a eu un strike ou un spare lors des 2 premiers lancers.
+### Exemple de représentation de partie avec scores
+- [5, 2, 4, 6, 10, 4, 4, 2, 3, 0, 0, 10, 10, 4, 6, 4, 0] => score de 120
+- [5, 2, 4, 6, 3, 4, 10, 8, 2, 1, 5, 9, 1, 0, 2, 4, 6, 5, 5, 3] => score de 104
+- [10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10] => score de 300
